@@ -6,13 +6,12 @@ body {
 .container {
     display: grid;
     grid-template-columns: minmax(250px, 15%) minmax(500px, 100%);
-    grid-template-rows: repeat(3, minmax(500px, 25%));
+    grid-template-rows: minmax(100px, 20%);
     border: 1px solid black;   
 }
 
 .logo-container {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     margin: 10px;
     font-size: 24px;
@@ -35,15 +34,17 @@ body {
 
 .link-container {
     padding-top: 30px;
-    display: flex;
-    flex-direction: column;
 }
 
 
-
+.link-container > nav  {
+    padding-bottom: 50px;
+}
 
 img {
     padding-right: 15px;  
+    height: 30px;
+    
 }
 
 
@@ -62,7 +63,60 @@ a {
 .header {
     border: 1px solid black;
     grid-column: 2 / 3;
-    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: minmax(50px, 100%);
+    grid-template-columns: minmax(600px, 60%) minmax(250px, 60%);
+    background-color: #2DD4BF;
+    padding: 0px 0px 0px 25px;
+}
+
+.search {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    place-self: center stretch;
+    padding: 15px;
+}
+
+.searchbar {
+    width: 450px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: #E2E8F0;
+}
+
+.notification {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    place-self: center;
+    
+}
+
+.welcome {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  
+
+}
+
+.actions {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    place-self: center;
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    
+
+}
+
+.actions > button {
+    border-radius: 10px;
+    background-color: #41b6e6;
+    border: none;
+    width: 100px;
+    height: 35px;
+    color: white;
+    font-weight:bold;
 }
 
 .content {
