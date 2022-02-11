@@ -14,8 +14,7 @@ body {
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+    place-self: center;
     margin: 10px;
     font-size: 24px;
 }
@@ -80,7 +79,6 @@ a {
     grid-column: 1 / 2;
     place-self: center stretch;
     padding: 15px;
-    
 }
 
 .searchbar {
@@ -96,6 +94,13 @@ a {
     place-self: center; 
 }
 
+.notification > a {
+    border: 3px solid #41b6e6;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #41b6e6;
+}
+
 .welcome {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -105,14 +110,12 @@ a {
 }
 
 .welcome > img {
-    
     height: 40px;
     grid-column: 1 / 2;
     align-self: center;
 }
 
 .welcome > div {
-  
     grid-column: 2 / 3;
     width: 350px;
 }
@@ -122,9 +125,6 @@ a {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     place-self: center;
-    text-align: center;
-    display: flex;
-    gap: 30px;
 }
 
 .actions > button {
@@ -135,6 +135,8 @@ a {
     height: 35px;
     color: white;
     font-weight:bold;
+    margin-right: 12px;
+    
 }
 
 .content {
@@ -142,8 +144,8 @@ a {
     grid-column: 2 / 3;
     background-color: #fff7f7;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
-    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
     background-color: #FFE4E6;
 }
 
@@ -244,6 +246,7 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+ 
 }
 
 .trending > div > h1 {
@@ -251,17 +254,19 @@ a {
 }
 
 .trending > div {
- 
+    
     border-bottom: 1px solid black;
     padding: 0px 25px 15px 25px;
     place-self: center;
     min-width: 250px;
+    margin-top: 10px;
 }
 .trending > div > a {
     color: black;
+   
 }
 
-/*iphone 12pro max width */
+/*iphone 12pro width */
 @media (max-width:450px) {
     .container {
         display: grid;
